@@ -4,8 +4,8 @@
                              https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>Learn_automation</groupId>
-    <artifactId>Learn_automation</artifactId>
+    <groupId>Automation_project</groupId>
+    <artifactId>Automation_project</artifactId>
     <version>0.0.1-SNAPSHOT</version>
 
     <properties>
@@ -23,19 +23,6 @@
             <scope>provided</scope>
         </dependency>
 
-        <!-- JavaMail -->
-        <dependency>
-            <groupId>com.sun.mail</groupId>
-            <artifactId>javax.mail</artifactId>
-            <version>1.6.2</version>
-        </dependency>
-
-        <dependency>
-            <groupId>jakarta.mail</groupId>
-            <artifactId>jakarta.mail-api</artifactId>
-            <version>2.0.1</version>
-        </dependency>
-
         <!-- Selenium WebDriver -->
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
@@ -43,19 +30,19 @@
             <version>4.9.1</version>
         </dependency>
 
-        <!-- Apache POI for Excel -->
+        <!-- Apache POI -->
         <dependency>
             <groupId>org.apache.poi</groupId>
             <artifactId>poi</artifactId>
             <version>4.1.2</version>
         </dependency>
 
-        <!-- TestNG -->
+        <!-- TestNG (Compile Scope for Jenkins) -->
         <dependency>
             <groupId>org.testng</groupId>
             <artifactId>testng</artifactId>
             <version>7.4.0</version>
-            <scope>test</scope>
+            <scope>compile</scope> <!-- Changed from test to compile -->
         </dependency>
 
         <!-- Commons IO -->
@@ -85,8 +72,12 @@
             <version>5.0.9</version>
         </dependency>
 
-        <!-- Learn_automation Dependency (Remove if not needed) -->
-       
+        <!-- Remove duplicate Learn_automation if not required -->
+        <dependency>
+            <groupId>Learn_automation</groupId>
+            <artifactId>Learn_automation</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
     </dependencies>
 
     <build>
@@ -109,7 +100,7 @@
                 </configuration>
             </plugin>
 
-            <!-- Maven Surefire Plugin -->
+            <!-- Maven Surefire Plugin (for TestNG in Jenkins) -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
@@ -125,11 +116,4 @@
             </plugin>
         </plugins>
     </build>
-
-    <repositories>
-        <repository>
-            <id>central</id>
-            <url>https://repo.maven.apache.org/maven2</url>
-        </repository>
-    </repositories>
 </project>
