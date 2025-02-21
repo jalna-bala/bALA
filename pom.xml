@@ -4,14 +4,14 @@
                              https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>Automation_project</groupId> <!-- Updated project name -->
-    <artifactId>Automation_project</artifactId> <!-- Updated project name -->
+    <groupId>Automation_project</groupId>
+    <artifactId>Automation_project</artifactId>
     <version>0.0.1-SNAPSHOT</version>
 
     <properties>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
-        <lombok.version>1.18.24</lombok.version> <!-- Add Lombok version -->
+        <lombok.version>1.18.24</lombok.version>
     </properties>
 
     <dependencies>
@@ -22,7 +22,8 @@
             <version>${lombok.version}</version>
             <scope>provided</scope>
         </dependency>
-        
+
+        <!-- JavaMail -->
         <dependency>
             <groupId>com.sun.mail</groupId>
             <artifactId>javax.mail</artifactId>
@@ -41,19 +42,13 @@
             <artifactId>selenium-java</artifactId>
             <version>4.9.1</version>
         </dependency>
-   
-        <!-- Apache POI -->
+
+        <!-- Apache POI for Excel -->
         <dependency>
             <groupId>org.apache.poi</groupId>
             <artifactId>poi</artifactId>
             <version>4.1.2</version>
         </dependency>
-  <dependency>
-    <groupId>org.testng</groupId>
-    <artifactId>testng</artifactId>
-    <version>7.4.0</version>
-    <scope>test</scope>
-</dependency>
 
         <!-- TestNG -->
         <dependency>
@@ -62,38 +57,41 @@
             <version>7.4.0</version>
             <scope>test</scope>
         </dependency>
-  
+
         <!-- Commons IO -->
         <dependency>
             <groupId>commons-io</groupId>
             <artifactId>commons-io</artifactId>
             <version>2.11.0</version>
         </dependency>
-  
-        <!-- Log4j API -->
+
+        <!-- Log4j -->
         <dependency>
             <groupId>org.apache.logging.log4j</groupId>
             <artifactId>log4j-api</artifactId>
             <version>2.18.0</version>
         </dependency>
-  
-        <!-- Log4j Core -->
+
         <dependency>
             <groupId>org.apache.logging.log4j</groupId>
             <artifactId>log4j-core</artifactId>
             <version>2.18.0</version>
         </dependency>
-  
+
         <!-- Extent Reports -->
         <dependency>
             <groupId>com.aventstack</groupId>
             <artifactId>extentreports</artifactId>
             <version>5.0.9</version>
         </dependency>
+
+        <!-- Learn_automation Dependency (Remove if not needed) -->
         <dependency>
-        	<groupId>Learn_automation</groupId>
-        	<artifactId>Learn_automation</artifactId>
-        	<version>0.0.1-SNAPSHOT</version>
+            <groupId>Learn_automation</groupId>
+            <artifactId>Learn_automation</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+            <scope>compile</scope>
+            <!-- Ensure this is available locally or in a remote repository -->
         </dependency>
     </dependencies>
 
@@ -110,13 +108,13 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.8.1</version> <!-- Updated version -->
+                <version>3.8.1</version>
                 <configuration>
                     <source>${maven.compiler.source}</source>
                     <target>${maven.compiler.target}</target>
                 </configuration>
             </plugin>
-            
+
             <!-- Maven Surefire Plugin -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -124,7 +122,7 @@
                 <version>3.0.0-M5</version>
                 <configuration>
                     <suiteXmlFiles>
-                        <suiteXmlFile>testng.xml</suiteXmlFile> <!-- Reference to the testng.xml at the root directory -->
+                        <suiteXmlFile>testng.xml</suiteXmlFile>
                     </suiteXmlFiles>
                     <systemPropertyVariables>
                         <webdriver.chrome.driver>C:\\Users\\DELL\\Downloads\\chromedriver-win64\\chromedriver.exe</webdriver.chrome.driver>
@@ -133,4 +131,11 @@
             </plugin>
         </plugins>
     </build>
+
+    <repositories>
+        <repository>
+            <id>central</id>
+            <url>https://repo.maven.apache.org/maven2</url>
+        </repository>
+    </repositories>
 </project>
