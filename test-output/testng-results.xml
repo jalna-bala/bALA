@@ -2,20 +2,20 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-02-21T16:03:33 IST" name="Default suite" finished-at="2025-02-21T16:03:42 IST" duration-ms="8780">
+  <suite started-at="2025-02-21T16:06:35 IST" name="Default suite" finished-at="2025-02-21T16:06:44 IST" duration-ms="9257">
     <groups>
     </groups>
-    <test started-at="2025-02-21T16:03:33 IST" name="Default test" finished-at="2025-02-21T16:03:42 IST" duration-ms="8780">
+    <test started-at="2025-02-21T16:06:35 IST" name="Default test" finished-at="2025-02-21T16:06:44 IST" duration-ms="9257">
       <class name="Test.TestClass">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:Test.TestClass@47eaca72]" started-at="2025-02-21T16:03:33 IST" name="setUp" finished-at="2025-02-21T16:03:37 IST" duration-ms="3617" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:Test.TestClass@1283bb96]" started-at="2025-02-21T16:06:35 IST" name="setUp" finished-at="2025-02-21T16:06:39 IST" duration-ms="4087" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="testCases1()[pri:1, instance:Test.TestClass@47eaca72]" started-at="2025-02-21T16:03:37 IST" name="testCases1" finished-at="2025-02-21T16:03:42 IST" duration-ms="4974" status="PASS">
+        <test-method signature="testCases1()[pri:1, instance:Test.TestClass@1283bb96]" started-at="2025-02-21T16:06:39 IST" name="testCases1" finished-at="2025-02-21T16:06:44 IST" duration-ms="4996" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testCases1 -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:Test.TestClass@47eaca72]" started-at="2025-02-21T16:03:42 IST" name="tearDown" finished-at="2025-02-21T16:03:42 IST" duration-ms="150" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:Test.TestClass@1283bb96]" started-at="2025-02-21T16:06:44 IST" name="tearDown" finished-at="2025-02-21T16:06:44 IST" duration-ms="126" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
