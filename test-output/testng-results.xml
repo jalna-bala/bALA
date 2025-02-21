@@ -2,19 +2,23 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-02-21T15:40:01 IST" name="Default suite" finished-at="2025-02-21T15:40:09 IST" duration-ms="7496">
+  <suite started-at="2025-02-21T15:45:51 IST" name="Default suite" finished-at="2025-02-21T15:45:59 IST" duration-ms="8381">
     <groups>
     </groups>
-    <test started-at="2025-02-21T15:40:01 IST" name="Default test" finished-at="2025-02-21T15:40:09 IST" duration-ms="7496">
+    <test started-at="2025-02-21T15:45:51 IST" name="Default test" finished-at="2025-02-21T15:45:59 IST" duration-ms="8381">
       <class name="Test.TestClass">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:Test.TestClass@a1153bc]" started-at="2025-02-21T15:40:01 IST" name="setUp" finished-at="2025-02-21T15:40:04 IST" duration-ms="2697" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:Test.TestClass@47eaca72]" started-at="2025-02-21T15:45:51 IST" name="setUp" finished-at="2025-02-21T15:45:54 IST" duration-ms="3394" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="testCases1()[pri:1, instance:Test.TestClass@a1153bc]" started-at="2025-02-21T15:40:04 IST" name="testCases1" finished-at="2025-02-21T15:40:09 IST" duration-ms="4772" status="PASS">
+        <test-method signature="testCases1()[pri:1, instance:Test.TestClass@47eaca72]" started-at="2025-02-21T15:45:54 IST" name="testCases1" finished-at="2025-02-21T15:45:59 IST" duration-ms="4833" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testCases1 -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:Test.TestClass@47eaca72]" started-at="2025-02-21T15:45:59 IST" name="tearDown" finished-at="2025-02-21T15:45:59 IST" duration-ms="125" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
       </class> <!-- Test.TestClass -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
