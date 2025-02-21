@@ -86,13 +86,7 @@
         </dependency>
 
         <!-- Learn_automation Dependency (Remove if not needed) -->
-        <dependency>
-            <groupId>Learn_automation</groupId>
-            <artifactId>Learn_automation</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
-            <scope>compile</scope>
-            <!-- Ensure this is available locally or in a remote repository -->
-        </dependency>
+       
     </dependencies>
 
     <build>
