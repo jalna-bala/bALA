@@ -10,7 +10,7 @@ import java.util.concurrent.TimeUnit;
 public class BaseTest {
     protected WebDriver driver;
 
-    @BeforeMethod
+   
     public void setUp() {
         // Set the path for the ChromeDriver
         System.setProperty("webdriver.chrome.driver", "C:\\Users\\User\\Downloads\\chromedriver-win64\\Chromedriver.exe");
@@ -29,7 +29,7 @@ public class BaseTest {
         }
     }
 
-   @AfterMethod
+  // @AfterMethod
     public void tearDown() {
         if (driver != null) {
             driver.quit();
