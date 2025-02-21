@@ -2,7 +2,6 @@ package Base;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.testng.annotations.*;
 import utils.ConfigReader;
 
 import java.util.concurrent.TimeUnit;
@@ -29,10 +28,5 @@ public class BaseTest {
         }
     }
 
-  // @AfterMethod
-    public void tearDown() {
-        if (driver != null) {
-            driver.quit();
-        }
-    }
+  
 }
