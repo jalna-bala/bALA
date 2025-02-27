@@ -9,8 +9,8 @@
     <version>0.0.1-SNAPSHOT</version>
 
     <properties>
-        <maven.compiler.source>1.8</maven.compiler.source>
-        <maven.compiler.target>1.8</maven.compiler.target>
+        <maven.compiler.source>8</maven.compiler.source>
+        <maven.compiler.target>8</maven.compiler.target>
         <lombok.version>1.18.24</lombok.version>
     </properties>
 
@@ -33,7 +33,7 @@
         <!-- Apache POI for Excel reading/writing -->
         <dependency>
             <groupId>org.apache.poi</groupId>
-            <artifactId>poi</artifactId>
+            <artifactId>poi-ooxml</artifactId>
             <version>4.1.2</version>
         </dependency>
 
@@ -41,7 +41,7 @@
         <dependency>
             <groupId>org.testng</groupId>
             <artifactId>testng</artifactId>
-            <version>7.4.0</version>
+            <version>7.7.1</version>
             <scope>test</scope>
         </dependency>
 
@@ -52,24 +52,24 @@
             <version>2.11.0</version>
         </dependency>
 
-        <!-- Log4j for logging -->
+        <!-- Log4j for logging (Upgraded for security) -->
         <dependency>
             <groupId>org.apache.logging.log4j</groupId>
             <artifactId>log4j-api</artifactId>
-            <version>2.18.0</version>
+            <version>2.20.0</version>
         </dependency>
 
         <dependency>
             <groupId>org.apache.logging.log4j</groupId>
             <artifactId>log4j-core</artifactId>
-            <version>2.18.0</version>
+            <version>2.20.0</version>
         </dependency>
 
         <!-- Jakarta Mail API for email functionality -->
         <dependency>
-            <groupId>jakarta.mail</groupId>
-            <artifactId>jakarta.mail-api</artifactId>
-            <version>2.0.1</version>
+            <groupId>com.sun.mail</groupId>
+            <artifactId>javax.mail</artifactId>
+            <version>1.6.2</version>
         </dependency>
 
         <!-- Extent Reports for reporting -->
@@ -110,7 +110,7 @@
                         <suiteXmlFile>testng.xml</suiteXmlFile>
                     </suiteXmlFiles>
                     <systemPropertyVariables>
-                        <webdriver.chrome.driver>C:\\Users\\DELL\\Downloads\\chromedriver-win64\\chromedriver.exe</webdriver.chrome.driver>
+                        <webdriver.chrome.driver>${user.home}/Downloads/chromedriver-win64/chromedriver.exe</webdriver.chrome.driver>
                     </systemPropertyVariables>
                 </configuration>
             </plugin>
