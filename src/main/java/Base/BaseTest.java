@@ -3,8 +3,6 @@ package Base;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.*;
-import utils.ConfigReader;
-
 import java.util.concurrent.TimeUnit;
 
 public class BaseTest {
@@ -20,19 +18,18 @@ public class BaseTest {
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         driver.manage().window().maximize();
 
-        // Get URL from ConfigReader
-        String url = ConfigReader.getProperty("url");
-        if (url != null) {
-            driver.get(url);
-        } else {
-            throw new RuntimeException("URL not found in data.properties file.");
-        }
+        // Open URL
+        driver.get("https://shardaonline.ac.in");  // Fixed syntax
     }
 
-   @AfterMethod
+    @AfterMethod
     public void tearDown() {
         if (driver != null) {
             driver.quit();
         }
+    }
+
+    public void fetchData() {
+        // TODO Auto-generated method stub
     }
 }

@@ -2,41 +2,39 @@ package Test;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import Base.BaseTest;
 import utils.ConfigReader;
+import java.time.Duration;
 
-public class TestClass extends BaseTest {
+import javax.xml.crypto.Data;
 
-    @Test(priority = 1)
-    public void testCases1() throws InterruptedException {
-        // Click on Explore Program
-        driver.findElement(By.xpath(ConfigReader.getProperty("explore_program_xpath"))).click();
-        Thread.sleep(2000);  // Use WebDriverWait in real scenarios
+public class TestClass extends BaseTest implements datas {  // Corrected syntax
 
-        // Click on Healthcare and Hospital Administration
-        driver.findElement(By.xpath(ConfigReader.getProperty("Healthcare_and_Hospital_Administration_xpath"))).click();
-        Thread.sleep(2000);
+  
 
-        // Get the actual text from the web page
-        WebElement textElement = driver.findElement(By.xpath(ConfigReader.getProperty("Healthcare_and_Hospital_Administration_string")));
-        String actualText = textElement.getText();
-       // System.out.println(actualText); 
-       // System.out.println(ConfigReader.getProperty("Healthcare_and_Hospital_Administration"));
+    @Test(priority = 11)
+    public void TESTCASES11() throws InterruptedException {
        
+        driver.findElement(By.xpath(explore_program_xpath)).click();
         
+        driver.findElement(By.xpath(Healthcare_and_Hospital_Administration_xpath_program_click)).click();
         
-        
-        
-        String expectedText = ConfigReader.getProperty("Healthcare_and_Hospital_Administration");
+        WebElement text = driver.findElement(By.xpath(Healthcare_and_Hospital_Administration_string_rev));
        
+        String IB = text.getText();
+       
+      //   System.out.println(IB);
 
-        // Assertion
-        Assert.assertEquals(actualText, expectedText, "Text mismatch!");
-      System.out.println(actualText);
-    System.out.println(expectedText);
-               
-        driver.close();
+       //Assert.assertEquals(Healthcare_and_Hospital_Administration_Data, IB);
+       Assert.assertEquals(IB, Healthcare_and_Hospital_Administration);
+       System.out.println(IB + " ELECTIVE IS FOUND");
+       
+       driver.close();
+
     }
+    
 }
