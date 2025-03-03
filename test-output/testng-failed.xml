@@ -7,7 +7,6 @@
         <methods>
           <include name="TESTCASES11"/>
           <include name="tearDown"/>
-          <include name="setUp"/>
         </methods>
       </class> <!-- Test.TestClass -->
     </classes>
